@@ -3,16 +3,18 @@
 
 
    <div class="row">
-     <ng-container  *ngFor="let book of books "  >
+     <ng-container  *ngFor="let book of books | paginate: { itemsPerPage: 4, currentPage: p };"  >
        <a class="bookBox col-sm-4 pull-left" *ngIf="(book.cat == categeruryID || categeruryID ==1)"
           [routerLink]="['/books/story/',book.slug]" >
             <div class="book-cover" [ngStyle]="{'background': 'url(' + book.image + ') no-repeat 0 0'}"> {{book.title}}</div>
           {{book.title}}
       </a>
      </ng-container>
+
   </div>
-
-
+      <div class="row paginationBox">
+      <pagination-controls class="Cpagination" (pageChange)="p = $event"></pagination-controls>
+      </div>
 <hr>
 
 

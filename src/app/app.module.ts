@@ -8,12 +8,14 @@ import {HeaderComponent} from './header/header.component';
 import { MainMenuComponent } from './header/main-menu/main-menu.component';
 import { CartComponent } from './header/cart/cart.component';
 import { FooterComponent } from './footer/footer.component';
-import {Route, RouterModule} from '@angular/router';
+// import {Route, RouterModule} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { BooksComponent } from './books/books.component';
 import { StoryComponent } from './books/story/story.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
-const appRoutes: Route = [
+const appRoutes: Routes = [
     {path: '' , component: MainComponent} ,
     {path: 'books' , component: BooksComponent},
     {path: 'books/:categuryId' , component: BooksComponent},
@@ -32,14 +34,14 @@ const appRoutes: Route = [
    FooterComponent,
    MainComponent,
    BooksComponent,
-   StoryComponent
+   StoryComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
-
+    RouterModule.forRoot(appRoutes),
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

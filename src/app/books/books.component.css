@@ -4,3 +4,12 @@
     background-position: center;
     border-radius: 5px;
 }
+
+
+.paginationBox {
+    margin-top: 50px;
+}
+.Cpagination {
+    position: relative;
+    left: 40%;
+}

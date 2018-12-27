@@ -9,8 +9,9 @@ import {Subscription} from 'rxjs';
   styleUrls: ['./books.component.css']
 })
 
-export class BooksComponent implements OnInit ,OnDestroy{
+export class BooksComponent implements OnInit ,OnDestroy {
     paramsSubsctiption:Subscription;
+    p: number = 1;
     books: Book[] = [
         new Book(1,1,'first Book','first-Book','/assets/books/book1.jpg',25,'one of best selles books'),
         new Book(2,2,'Book Num 2','Book-Num-2','/assets/books/book1.jpg',55,'one of best selles books'),

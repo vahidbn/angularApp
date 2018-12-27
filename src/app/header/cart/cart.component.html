@@ -1,0 +1,9 @@
+<div class="cartBox" (click)="open_cart()" >
+  <i class="fa fa-cart-plus" >
+    <span>{{cartStatus}} </span>
+  </i>
+</div>
+
+  <input class="form-control" type="text" [(ngModel)]="playerName"  (input)="getSearchkeyWord($event)">
+ {{ youSearching}}
+

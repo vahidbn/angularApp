@@ -1,0 +1,17 @@
+.cartBox i {
+    font-size: 30px;
+    color: #ffffff;
+    background: #007bff;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 1.5;
+    border-radius: 100%;
+    float: right;
+    cursor: pointer;
+}
+
+.cartBox i span {
+    font-size: 12px;
+    margin-left: 3px;
+}

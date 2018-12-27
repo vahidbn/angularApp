@@ -7,20 +7,38 @@ import {FormsModule} from '@angular/forms';
 import {HeaderComponent} from './header/header.component';
 import { MainMenuComponent } from './header/main-menu/main-menu.component';
 import { CartComponent } from './header/cart/cart.component';
+import { FooterComponent } from './footer/footer.component';
+import {Route, RouterModule} from '@angular/router';
+import { MainComponent } from './main/main.component';
+import { BooksComponent } from './books/books.component';
+import { StoryComponent } from './books/story/story.component';
 
+const appRoutes: Route = [
+    {path: '' , component: MainComponent} ,
+    {path: 'books' , component: BooksComponent},
+    {path: 'books/:categuryId' , component: BooksComponent},
+    {path: 'books/story/:storySlug' , component: StoryComponent}
+
+
+
+];
 
 @NgModule({
   declarations: [
     AppComponent,
    HeaderComponent,
    MainMenuComponent,
-   CartComponent
+   CartComponent,
+   FooterComponent,
+   MainComponent,
+   BooksComponent,
+   StoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
 
   ],
   providers: [],

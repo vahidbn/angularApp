@@ -11,7 +11,7 @@ export class MainMenuComponent implements OnInit {
     new Menu(1, 'All books', 'fa fa-check' ),
     new Menu(2  , 'books 0-4', 'fa fa-book' ),
     new Menu(3  , 'books 4-8', 'fa fa-book' ),
-    new Menu(3  , 'other', 'fa fa-book' ),
+    new Menu(4  , 'other', 'fa fa-book' ),
      ]
   constructor() { }
 

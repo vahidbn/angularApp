@@ -1,0 +1,19 @@
+  <div class="container">
+  books works! {{categeruryID}}
+
+
+   <div class="row">
+     <ng-container  *ngFor="let book of books "  >
+       <a class="bookBox col-sm-4 pull-left" *ngIf="(book.cat == categeruryID || categeruryID ==1)"
+          [routerLink]="['/books/story/',book.slug]" >
+            <div class="book-cover" [ngStyle]="{'background': 'url(' + book.image + ') no-repeat 0 0'}"> {{book.title}}</div>
+          {{book.title}}
+      </a>
+     </ng-container>
+  </div>
+
+
+<hr>
+
+
+</div>

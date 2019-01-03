@@ -1,8 +1,12 @@
-  <div class="container">
-  books works! {{categeruryID}}
 
+<div class="aboutCategury">
+    <div class="container">
+        <h1>{{aboutCategury}}</h1>
+    </div>
+</div>
 
-   <div class="row">
+<div class="container">
+  <div class="row">
      <ng-container  *ngFor="let book of books | paginate: { itemsPerPage: 4, currentPage: p };"  >
        <a class="bookBox col-sm-4 pull-left" *ngIf="(book.cat == categeruryID || categeruryID ==1)"
           [routerLink]="['/books/story/',book.slug]" >

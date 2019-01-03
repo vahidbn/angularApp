@@ -15,19 +15,22 @@ import { BooksComponent } from './books/books.component';
 import { StoryComponent } from './books/story/story.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 
+
+
 const appRoutes: Routes = [
     {path: '' , component: MainComponent} ,
+
     {path: 'books' , component: BooksComponent},
     {path: 'books/:categuryId' , component: BooksComponent},
     {path: 'books/story/:storySlug' , component: StoryComponent}
 
-
-
 ];
+
+
 
 @NgModule({
   declarations: [
-    AppComponent,
+   AppComponent,
    HeaderComponent,
    MainMenuComponent,
    CartComponent,
@@ -35,6 +38,7 @@ const appRoutes: Routes = [
    MainComponent,
    BooksComponent,
    StoryComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -42,6 +46,7 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoutes),
     NgxPaginationModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

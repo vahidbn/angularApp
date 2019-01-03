@@ -14,10 +14,10 @@ export class BooksComponent implements OnInit ,OnDestroy {
     paramsSubsctiption:Subscription;
     p: number = 1;
     books: Book[] = [
-        new Book(1,1,'first Book','first-Book','/assets/books/book1.jpg',25,'one of best selles books'),
-        new Book(2,2,'Book Num 2','Book-Num-2','/assets/books/book1.jpg',55,'one of best selles books'),
-        new Book(3,2,'Book Num 3','Book-Num-3','/assets/books/book1.jpg',45,'one of best selles books'),
-        new Book(4,3,'Book Num 4','Book-Num-4','/assets/books/book1.jpg',65,'one of best selles books'),
+        new Book(1,1,'first Book','first-Book','/assets/books/A-min.jpg',25,'one of best selles books'),
+        new Book(2,2,'Book Num 2','Book-Num-2','/assets/books/B-min.jpg',55,'one of best selles books'),
+        new Book(3,2,'Book Num 3','Book-Num-3','/assets/books/C-min.jpg',45,'one of best selles books'),
+        new Book(4,3,'Book Num 4','Book-Num-4','/assets/books/D-min.jpg',65,'one of best selles books'),
     ]
 
 

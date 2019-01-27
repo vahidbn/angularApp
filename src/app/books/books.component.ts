@@ -27,6 +27,7 @@ export class BooksComponent implements OnInit ,OnDestroy {
   constructor(private router: ActivatedRoute) { }
 
   ngOnInit() {
+      window.scrollTo(0, 0)
       this.categeruryID = this.router.snapshot.params['categuryId'];
 
       this.paramsSubsctiption=   this.router.params.subscribe(
@@ -38,10 +39,12 @@ export class BooksComponent implements OnInit ,OnDestroy {
 
 
           })
+
   }
 
     ngOnDestroy(){
     this.paramsSubsctiption.unsubscribe();
+        window.scrollTo(0, 0)
     }
 
 

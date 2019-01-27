@@ -12,15 +12,108 @@
     <h2 class="title"> Top New stores </h2>
     <div class="row">
         <div class="col-md-4">
-            <div class="SingleBook book1"></div>
+            <a  [routerLink]="['/books/story/first-Book']"  >
+                <div class="SingleBook book1"></div>
+            </a>
         </div>
         <div class="col-md-4">
+            <a  [routerLink]="['/books/story/Book-Num-2']"  >
             <div class="SingleBook book2"></div>
+            </a>
         </div>
         <div class="col-md-4">
+            <a  [routerLink]="['/books/story/Book-Num-3']"  >
             <div class="SingleBook book3"></div>
+            </a>
         </div>
     </div>
 </section>
+
+<section class="aboutBooks col-md-12">
+    <div class="title col-md-12">
+        <h2>Nice books which you know the heros</h2>
+    </div>
+    <div class="container">
+        <div class="iconBox col-md-12">
+            <div class="col-md-3 pull-left">
+                <div class="icons iconImage_1"></div>
+            </div>
+            <div class="col-md-3 pull-left">
+                <div class="icons iconImage_2"></div>
+            </div>
+            <div class="col-md-3 pull-left">
+                <div class="icons iconImage_3"></div>
+            </div>
+            <div class="col-md-3 pull-left">
+                <div class="icons iconImage_4"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="Steps col-md-12 "  style="display: none">
+    <div class="container">
+        <div class="StepsBody col-md-12">
+            <div class="col-md-3 pull-left">ss</div>
+            <div class="col-md-3 pull-left"></div>
+            <div class="col-md-3 pull-left"></div>
+            <div class="col-md-3 pull-left"></div>
+        </div>
+    </div>
+</section>
+
+<section class="NewBook">
+    <div class="container">
+        <div class="col-md-12">
+            <img class="newIcon" src="../../assets/theme/image/newBook.png" >
+        </div>
+        <div class="col-md-12">
+            <div class="nBookImg col-md-6 pull-left">
+                <a  [routerLink]="['/books/story/Book-Num-4']"  >
+                <img src="../../assets/books/D-min.jpg">
+                </a>
+            </div>
+            <div class="col-md-6 pull-left">
+                <h2>You can write children’s books</h2>
+                <p>
+                    Its the time your kids start to write cool
+                    stories for their friends! they can be
+                    writes...!!! find out more
+                </p>
+                <a  class="slide_Btn1 btn btn-outline-info  ">Create your book</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="AsGift">
+        <div class="container">
+            <div class="col-md-12">
+                <h2>It can be a very cool gift</h2>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-3 pull-left">
+                    <div class="icons iconImage_1"></div>
+                    <h3>Ship worldwide</h3>
+                </div>
+                <div class="col-md-3 pull-left">
+                    <div class="icons iconImage_2"></div>
+                    <h3>Ship worldwide</h3>
+                </div>
+                <div class="col-md-3 pull-left">
+                    <div class="icons iconImage_3"></div>
+                    <h3>Ship worldwide</h3>
+                </div>
+                <div class="col-md-3 pull-left">
+                    <div class="icons iconImage_4"></div>
+                    <h3>Ship worldwide</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
 
 </div>

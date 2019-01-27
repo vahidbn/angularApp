@@ -8,8 +8,8 @@ section.topSlider .slide_text1 {
     top: 250px;
     position: relative;
     float: right;
-    right: 0px;
-    font-size: 30px;
+    right: -15px;
+    font-size: 28px;
     font-family: cursive;
     font-weight: bold;
 }
@@ -49,4 +49,97 @@ section.TopBooks {
 }
 .book3{
     background: url("../../assets/books/C-min.jpg");
+}
+
+/*------------------------------------------*/
+section.aboutBooks {
+    min-height: 400px;
+    background: #f4f4f438;
+    padding-top: 50px;
+
+}
+section.aboutBooks .title {
+    text-align: center;
+}
+section.aboutBooks .iconBox {
+    margin-top: 30px;
+}
+.aboutBooks .icons{
+    width: 100%;
+    height: 150px;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+.aboutBooks .icons.iconImage_1{
+    background: url("../../assets/theme/image/icon_A_1.png");
+}
+.aboutBooks .icons.iconImage_2{
+    background: url("../../assets/theme/image/icon_A_2.png");
+}
+.aboutBooks .icons.iconImage_3{
+    background: url("../../assets/theme/image/icon_A_3.png");
+}
+.aboutBooks .icons.iconImage_4{
+    background: url("../../assets/theme/image/icon_A_4.png");
+}
+
+/*-------------------------------------------------*/
+section.Steps {
+    min-height: 350px;
+    background: #f4f4f4;
+}
+/*-------------------------------------------------*/
+section.NewBook
+{
+    background: #a0dae0;
+    min-height:  500px;
+}
+
+section.NewBook .newIcon {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left: 43%;
+    top: -50px;
+}
+
+.NewBook .nBookImg img{
+    position: relative;
+    top: -50px;
+    width: 60%;
+    transform: rotate(-10deg);
+    box-shadow: 0px 1px 12px 2px grey;
+}
+
+/*--------------------------------------------------*/
+section.AsGift {
+    padding-top: 80px;
+    background: #f4f4f4;
+    height: 350px;
+}
+section.AsGift .icons{
+    width: 40%;
+    height: 75px;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+.AsGift .icons.iconImage_1{
+    background: url("../../assets/theme/image/img_gift_1.png");
+}
+.AsGift .icons.iconImage_2{
+    background: url("../../assets/theme/image/img_gift_2.png");
+}
+.AsGift .icons.iconImage_3{
+    background: url("../../assets/theme/image/img_gift_3.png");
+}
+.AsGift .icons.iconImage_4{
+    background: url("../../assets/theme/image/img_gift_4.png");
+}
+section.AsGift h2 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+section.AsGift h3 {
+    font-size: 15px;
+    letter-spacing: 1px;
 }

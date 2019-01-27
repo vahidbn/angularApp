@@ -40,6 +40,7 @@ export class StoryComponent implements OnInit {
               this.bookPrice='$'+this.Allbooks[i]['price']+' USD';
            }
       }
+      window.scrollTo(0, 0)
   }
 
 }

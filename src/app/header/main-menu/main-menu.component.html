@@ -1,12 +1,11 @@
 <nav>
+
 <ul >
   <li *ngFor="let mnu of myItemmenu" >
-    <a [routerLink]="['books',mnu.menuid]" >
-      <i class="{{ mnu.menuicon}}" ></i> {{ mnu.menuTitle }}
+    <a [routerLink]="['books',mnu.Slug]" >
+      <i class="{{ mnu.Image}}" ></i> {{ mnu.Name }}
     </a>
   </li>
-  <!--<li>books 0-4</li>-->
-  <!--<li>books 4-8 </li>-->
-  <!--<li>Other Books</li>-->
+
 </ul>
 </nav>

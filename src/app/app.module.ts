@@ -14,6 +14,9 @@ import { MainComponent } from './main/main.component';
 import { BooksComponent } from './books/books.component';
 import { StoryComponent } from './books/story/story.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import {HttpClientModule} from '@angular/common/http';
+// import * as httpS from 'https';
+import {HttpService} from './Services/httpService.service';
 
 
 
@@ -46,9 +49,11 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoutes),
     NgxPaginationModule,
+    HttpClientModule,
+
 
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

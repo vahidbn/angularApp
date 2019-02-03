@@ -3,6 +3,7 @@ import {ActivatedRoute, Params} from '@angular/router';
 import {Book} from './book.model';
 import {Subscription} from 'rxjs';
 import {BooksMethods} from './BooksMethods';
+import {HttpService} from '../Services/httpService.service';
 
 @Component({
   selector: 'app-books',
@@ -13,37 +14,35 @@ import {BooksMethods} from './BooksMethods';
 export class BooksComponent implements OnInit ,OnDestroy {
     paramsSubsctiption:Subscription;
     p: number = 1;
-    books: Book[] = [
-        new Book(1,1,'first Book','first-Book','/assets/books/A-min.jpg',25,'one of best selles books'),
-        new Book(2,2,'Book Num 2','Book-Num-2','/assets/books/B-min.jpg',55,'one of best selles books'),
-        new Book(3,2,'Book Num 3','Book-Num-3','/assets/books/C-min.jpg',45,'one of best selles books'),
-        new Book(4,3,'Book Num 4','Book-Num-4','/assets/books/D-min.jpg',65,'one of best selles books'),
-    ]
-
-
-    categeruryID ="*";
+    books: any;
     aboutCategury="";
     a:BooksMethods;
-  constructor(private router: ActivatedRoute) { }
+    catSlug="";
+
+  constructor(private router: ActivatedRoute , private  httpservice:HttpService  )
+  {}
 
   ngOnInit() {
+
+     this.paramsSubsctiption= this.router.params.subscribe(
+          (params:Params)=>{
+             this.catSlug=params.categuryId;
+              this.httpservice.fetchBookList(this.catSlug ).subscribe(
+                        (response)=>{
+                            this.books =response;
+                        }
+                    )
+          }
+      )
+
       window.scrollTo(0, 0)
-      this.categeruryID = this.router.snapshot.params['categuryId'];
-
-      this.paramsSubsctiption=   this.router.params.subscribe(
-          (params:Params)=>
-          {
-             this.categeruryID = this.router.snapshot.params['categuryId'];
-             this.a=new BooksMethods();
-             this.aboutCategury=this.a.categoryDescription(this.categeruryID);
-
-
-          })
-
   }
+
+
 
     ngOnDestroy(){
     this.paramsSubsctiption.unsubscribe();
+    console.log('unsubscribe');
         window.scrollTo(0, 0)
     }
 

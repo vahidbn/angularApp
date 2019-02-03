@@ -6,20 +6,20 @@
 </div>
 
 <div class="container">
-  <div class="row">
-     <ng-container  *ngFor="let book of books | paginate: { itemsPerPage: 4, currentPage: p };"  >
-       <a class="bookBox col-sm-4 pull-left" *ngIf="(book.cat == categeruryID || categeruryID ==1)"
-          [routerLink]="['/books/story/',book.slug]" >
-            <div class="book-cover" [ngStyle]="{'background': 'url(' + book.image + ') no-repeat 0 0'}"> {{book.title}}</div>
-          {{book.title}}
-      </a>
-     </ng-container>
-
-  </div>
-      <div class="row paginationBox">
-      <pagination-controls class="Cpagination" (pageChange)="p = $event"></pagination-controls>
+{{catSlug}}
+      <div class="row" >
+         <ng-container  *ngFor="let book of books | paginate: { itemsPerPage: 4, currentPage: p };"    >
+             <!--*ngIf="(book.cat == categeruryID || categeruryID ==1)"-->
+           <a class="bookBox col-sm-4 pull-left"
+              [routerLink]="['/books/story/',book.BookName]" >
+                <div class="book-cover" [ngStyle]="{'background': 'url(https://myonestory.sakkou.org' + book.ImageUrl + ') no-repeat 0 0'}"> </div>
+              {{book.BookTitle}}
+          </a>
+         </ng-container>
       </div>
-<hr>
 
-
+      <div class="row paginationBox">
+        <pagination-controls class="Cpagination" (pageChange)="p = $event"></pagination-controls>
+      </div>
+    <hr>
 </div>

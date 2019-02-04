@@ -7,12 +7,13 @@
 
 <div class="container">
 {{catSlug}}
+    <i *ngIf="waitSpinner" class="fa fa-spinner fa-spin" style="font-size:70px;color: #007bff;width: 100% ; text-align: center"></i>
       <div class="row" >
          <ng-container  *ngFor="let book of books | paginate: { itemsPerPage: 4, currentPage: p };"    >
              <!--*ngIf="(book.cat == categeruryID || categeruryID ==1)"-->
            <a class="bookBox col-sm-4 pull-left"
               [routerLink]="['/books/story/',book.BookName]" >
-                <div class="book-cover" [ngStyle]="{'background': 'url(https://myonestory.sakkou.org' + book.ImageUrl + ') no-repeat 0 0'}"> </div>
+                <div class="book-cover" [ngStyle]="{'background': 'url('+baseUrl+ book.ImageUrl + ') no-repeat 0 0'}"> </div>
               {{book.BookTitle}}
           </a>
          </ng-container>

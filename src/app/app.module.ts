@@ -17,6 +17,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import {HttpClientModule} from '@angular/common/http';
 // import * as httpS from 'https';
 import {HttpService} from './Services/httpService.service';
+import {PublicService} from './Services/publicService.service';
 
 
 
@@ -53,7 +54,7 @@ const appRoutes: Routes = [
 
 
   ],
-  providers: [HttpService],
+  providers: [HttpService ,PublicService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
